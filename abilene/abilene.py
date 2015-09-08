@@ -50,7 +50,7 @@ class Abilene(Topo):
         self.addLink(self.h5, self.s5, **linkopts_1)
         self.addLink(self.h6, self.s6, **linkopts_1)
         self.addLink(self.h7, self.s7, **linkopts_1)
-        self.addLink(self.h8, self.s8, **linkopts_2)
+        self.addLink(self.h8, self.s8, **linkopts_1)
         self.addLink(self.h9, self.s9, **linkopts_1)
         self.addLink(self.h10, self.s10, **linkopts_1)
         self.addLink(self.h11, self.s11, **linkopts_1)
