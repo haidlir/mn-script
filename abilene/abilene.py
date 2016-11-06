@@ -40,8 +40,11 @@ class Abilene(Topo):
         self.s10 = self.addSwitch('s10', protocols='OpenFlow13')
         self.s11 = self.addSwitch('s11', protocols='OpenFlow13')
 
-        linkopts_1 = {'bw':100, 'delay':'1ms'}
-        # linkopts_2 = {'bw':200, 'delay':'1ms'}
+        #linkopts_1 = {'bw':100, 'delay':'1ms'}
+        #linkopts_2 = {'bw':200, 'delay':'1ms'}
+
+        linkopts_1 = {}
+        linkopts_2 = {}	
 
         self.addLink(self.h1, self.s1, **linkopts_1)
         self.addLink(self.h2, self.s2, **linkopts_1)
@@ -73,7 +76,7 @@ class Abilene(Topo):
 def myNetwork(arg):
 
     net = Mininet(Abilene(), switch=OVSKernelSwitch, controller=None, link=TCLink)
-    net.addController(RemoteController( name='c0', ip='192.168.56.1' ))
+    net.addController(RemoteController( name='c0', ip='192.168.56.101' ))
 
     net.start()
     for ihost in net.hosts:
